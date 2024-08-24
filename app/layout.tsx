@@ -16,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+      <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/fb-picporter.appspot.com/o/HADA%2FPreviewSaas.png?alt=media&token=be97f5fa-de6f-4371-bfe9-2b04dab6c279"/>
+      </head>
       <body className={DMSans.className}>{children}</body>
     </html>
   );
