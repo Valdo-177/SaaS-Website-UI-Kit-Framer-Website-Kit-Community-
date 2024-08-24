@@ -2,32 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.animation1 {
+    animation-name: moveElement;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes moveElement {
+    0% {
+        transform: translateX(1rem); 
+    }
+    50% {
+        transform: translateX(-1rem); 
+    }
+    100% {
+        transform: translateX(1rem); 
+    }
+}
+.animation2 {
+    animation-name: moveElement2;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes moveElement2 {
+    0% {
+        transform: translateX(1rem); 
+    }
+    50% {
+        transform: translateX(2rem); 
+    }
+    100% {
+        transform: translateX(1rem);
+    }
+}
+.animation3 {
+    animation-name: moveElement3;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes moveElement3 {
+    0% {
+        transform: rotate(0deg);  
+    }  
+    50% {
+        transform: rotate(10deg); 
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+img {
+    user-select: none;
+    pointer-events: none;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+  
